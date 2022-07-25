@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
     <title>Pokedex</title>
   </head>
   <body>
@@ -36,7 +37,34 @@
               <div class="little-display-light display-light"></div>
             </div>
           </div>
-          <div class="display"></div>
+          <div class="display">
+
+            <h3 id="pokemon-id-name">
+              <scan id="pokemon-id"></scan> - <scan id="pokemon-name">Enter a pokémon ID</scan>
+            </h3>
+
+            <div id="data-container">
+              <div id="left-container">
+                <img src="" id="pokemon-sprite" class="d-none">
+                <div id="types"></div>
+              </div>
+              <div id="right-container">
+                <div>
+                  <p class="bold d-none stat">HP: <span class="normal" id="pokemon-hp"></span></p>
+                  <p class="bold d-none stat">Att: <span class="normal" id="pokemon-att"></span></p>
+                  <p class="bold d-none stat">Def: <span class="normal" id="pokemon-def"></span></p>
+                  <p class="bold d-none stat">S.Att: <span class="normal" id="pokemon-satt"></span></p>
+                  <p class="bold d-none stat">S.Def: <span class="normal" id="pokemon-sdef"></span></p>
+                  <p class="bold d-none stat">Spd: <span class="normal" id="pokemon-spd"></span></p>
+                </div>
+                <div>
+                  <p class="bold d-none">Height: <span class="normal" id="pokemon-height"></span></p>
+                  <p class="bold d-none">Weight: <span class="normal" id="pokemon-weight"></span></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
           <div class="bottom-display">
             <div class="light-container">
               <div class="big-display-light display-light"></div>
@@ -49,6 +77,10 @@
             </div>
           </div>
         </div>
+
+        <form class="pokedex-form" id="pokedex-form">
+          <input type="search" id="pokemon-id-input" placeholder="Name or id" autocomplete="off">
+        </form>
 
       </div>
     </main>
