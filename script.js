@@ -15,13 +15,15 @@ const spdField = document.querySelector("#pokemon-spd");
 
 const spriteField = document.querySelector("#pokemon-sprite");
 
+const typesContainer = document.querySelector("#types-container");
+
 function getPokemon(id) {
     return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
 }
 
-function renderPokemon({id, name, sprites, height, weight, stats}){
+function renderPokemon({id, name, sprites, height, weight, stats, types}){
     spriteField.src = sprites.front_default;
-    
+
     idField.innerHTML = id;
     nameField.innerHTML = name;
     heightField.innerHTML = `${height}`;
@@ -66,7 +68,17 @@ function renderPokemon({id, name, sprites, height, weight, stats}){
 
     });
 
-    
+    typesContainer.innerHTML = "";
+
+    types.forEach(type => {
+        const typeElement = `
+            <div class="type type-${type.type.name}">
+                ${type.type.name}
+            </div>
+        `;
+        typesContainer.innerHTML += typeElement;        
+    });
+
 }
 
 function showElements(...elements){
@@ -86,6 +98,8 @@ function hideElements(...elements){
             element.classList.add("d-none")
         }
     });
+
+    typesContainer.innerHTML = "";
 }
 
 async function search(evt){
