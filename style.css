@@ -2,7 +2,13 @@
   --border-color: rgb(124, 0, 0);
   --case-color: red;
   --case-first-shadow: rgb(162, 3, 3);
-  --case-second-shadow: rgb(124, 0, 0);
+  --case-second-shadow: var(--border-color);
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
@@ -34,28 +40,91 @@ body {
 }
 
 .pokedex-top-col {
-  width: 33.333%;
   height: 100%;
 }
 
 .pokedex-top-1 {
-  /* background-color: blue; */
-  border-radius: 0px 0px 5px 0px;
+  border-radius: 0px 0px 200px 0px / 0px 0px 15px 0px;
+  width:33%;
 }
 
 .pokedex-top-2 {
-  /* background-color: cyan; */
-  border-radius: 0px 0px 0px 5px;
+  border-radius: 0px 0px 0px 200px / 0px 0px 0px 12px;
   height: 64%;
   transform: skewY(150deg);
   width: 34%;
+  border-left-style: none;
 }
 
 .pokedex-top-3 {
   /* background-color: purple; */
-  height: 30% !important;
+  height: 29% !important;
+  width: 34%;
 }
 
 .pokedex-top-1, .pokedex-top-2, .pokedex-top-3 {
-  box-shadow: 0px 6px 0px 0px var(--case-first-shadow), 0px 8px 0px 0px var(--case-second-shadow);
+  box-shadow: 0px 10px 0px var(--case-first-shadow), 0px 12px 0px var(--case-second-shadow);
+}
+
+.blue-light{
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  background-color: cyan;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  border: 2px solid var(--border-color);
+}
+
+.blue-light .reflection{
+  width:55%;
+  height:35%;
+  border-radius: 100%;
+  background-color: rgb(227, 253, 253);
+  margin: 4px 14px;
+}
+
+.light{
+  position:absolute;
+  top: 7px;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+}
+
+.light .reflection{
+  width:55%;
+  height:35%;
+  border-radius: 100%;
+  background-color: white;
+  margin: 2px 3px;
+}
+
+.red{
+  left:55px;
+  background-color: rgb(231, 5, 5);
+  border: 2px solid var(--border-color);
+}
+
+.red .reflection{
+  background-color: rgb(252, 174, 174) !important;
+}
+
+.yellow{
+  left:75px;
+  background-color: yellow;
+  border: 2px solid var(--border-color);
+}
+.yellow .reflection{
+  background-color: rgb(253, 253, 217) !important;
+}
+
+.green{
+  left:95px;
+  background-color: chartreuse;
+  border: 2px solid var(--border-color);
+}
+.green .reflection{
+  background-color: rgb(234, 252, 216) !important;
 }
