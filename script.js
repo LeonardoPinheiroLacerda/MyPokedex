@@ -26,8 +26,8 @@ function renderPokemon({id, name, sprites, height, weight, stats, types}){
 
     idField.innerHTML = id;
     nameField.innerHTML = name;
-    heightField.innerHTML = `${height}`;
-    weightField.innerHTML = `${weight}`;
+    heightField.innerHTML = `${height / 10} m`;
+    weightField.innerHTML = `${weight / 10} kg`;
 
     stats.forEach((stat) => {
         var el;
