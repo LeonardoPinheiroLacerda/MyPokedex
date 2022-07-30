@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'retroGaming';
-  src: url('RetroGaming.ttf');
+  src: url('fonts/RetroGaming.ttf');
 }
 :root {
   --background-color: rgb(233, 97, 97);

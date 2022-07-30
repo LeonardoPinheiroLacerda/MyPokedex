@@ -6,4 +6,4 @@ The application can be accessed [here](https://LeonardoPinheiroLacerda.github.io
 
 ## The page looks like this:
 
-![diagram](/example.png)
+![diagram](/images/example.png)
