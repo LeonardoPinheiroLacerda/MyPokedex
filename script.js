@@ -104,7 +104,7 @@ function hideElements(...elements){
 
 async function search(evt){
     evt.preventDefault();
-    const pokemonId = pokemonInput.value;
+    const pokemonId = pokemonInput.value.toLowerCase();
 
     if(pokemonId == '') return;
 
