@@ -3,6 +3,8 @@
   src: url('RetroGaming.ttf');
 }
 :root {
+  --background-color: rgb(233, 97, 97);
+
   --border-color: rgb(85, 0, 0);
   --case-color: red;
   --case-first-shadow: rgb(162, 3, 3);
@@ -59,6 +61,11 @@ h3, h3 > span{
 body {
   display: flex;
   justify-content: center;
+
+  background: var(--background-color);
+  background: linear-gradient(160deg, var(--background-color) 0%, rgba(255,255,255,1) 100%);
+
+  height: 100vh;
 }
 
 /* Pokedex case */ 
@@ -69,7 +76,7 @@ body {
   height: 100%;
   border-radius: 10px;
   border: var(--border-width) solid var(--border-color);
-  box-shadow: -4px 4px 0px 4px var(--case-first-shadow), -5px 5px 0px 5px var(--case-second-shadow);
+  box-shadow: -4px 4px 0px 4px var(--case-first-shadow), -5px 5px 0px 5px var(--case-second-shadow), 0px 0px 100px white;
 }
 
 /* Pokedex top */
@@ -481,7 +488,7 @@ body {
   }
 
   .pokedex {
-    box-shadow: -5px 5px 0px 5px var(--case-first-shadow), -6px 6px 0px 6px var(--case-second-shadow);
+    box-shadow: -5px 5px 0px 5px var(--case-first-shadow), -6px 6px 0px 6px var(--case-second-shadow), 0px 0px 300px white;
   }
 
   .pokedex-top-1, .pokedex-top-2, .pokedex-top-3 {
@@ -523,7 +530,7 @@ body {
   }
   
   .pokedex {
-    box-shadow: -7px 7px 0px 7px var(--case-first-shadow), -9px 9px 0px 9px var(--case-second-shadow);
+    box-shadow: -7px 7px 0px 7px var(--case-first-shadow), -9px 9px 0px 9px var(--case-second-shadow), 0px 0px 750px white;
   }
 
   .pokedex-top-1, .pokedex-top-2, .pokedex-top-3 {
